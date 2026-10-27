@@ -156,6 +156,15 @@ content:
     path: _source/alumni
     filename: "{title}.md"
     format: yaml-frontmatter
+    operations:
+      create: true
+    view:
+      fields: [title, role, graduation_year]
+      primary: title
+      sort: [title, graduation_year]
+      default:
+        sort: title
+        order: asc
     fields:
       - name: title
         label: Name
