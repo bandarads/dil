@@ -35,7 +35,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
 	eleventyConfig.addPassthroughCopy('_source/assets/fonts');
 	eleventyConfig.addPassthroughCopy('_source/assets/images');
-
+        eleventyConfig.addPassthroughCopy('_source/admin/config.yml');
 	return {
 		dir: {
 			input: '_source',

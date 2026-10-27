@@ -1,0 +1,461 @@
+:root {
+	color-scheme: light;
+	--paper: #f4f1eb;
+	--ink: #171717;
+	--muted: #716f6a;
+	--line: #c9c5bd;
+	--red: #f04e3e;
+	--font-display: "Helvetica Neue", "Arial", sans-serif;
+	--font-body: "Helvetica Neue", "Arial", sans-serif;
+	--color-text: var(--ink);
+	--color-bg: var(--paper);
+	--color-bg-dark: #e6e2da;
+	--color-accent: var(--red);
+	--color-link: var(--ink);
+	--color-border: var(--line);
+}
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-body);
+	font-size: 1rem;
+	font-weight: 400;
+	min-block-size: 100vh;
+}
+
+body :where(p, ul, ol, dl, blockquote, li) {
+	color: var(--ink);
+}
+
+.poster-wrap {
+	inline-size: min(90rem, 100% - 3rem);
+	margin-inline: auto;
+}
+
+.poster-nav {
+	border-block-end: 1px solid var(--ink);
+	background: var(--paper);
+	position: sticky;
+	inset-block-start: 0;
+	z-index: 10;
+}
+
+.poster-nav .poster-wrap {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-block-size: 5.5rem;
+}
+
+.poster-nav .brand {
+	color: var(--ink);
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.brand span {
+	color: var(--red);
+	margin-inline-end: 0.5rem;
+}
+
+.poster-nav ul {
+	display: flex;
+	gap: clamp(1rem, 3vw, 3rem);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.poster-nav li a {
+	color: var(--ink);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.poster-nav li a:hover,
+.text-link:hover,
+.contact-link:hover {
+	color: var(--red);
+}
+
+.arrow {
+	color: var(--red);
+	font-size: 1rem;
+}
+
+.hero {
+	border-block-end: 1px solid var(--ink);
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.35fr);
+	gap: 2rem;
+	min-block-size: min(47rem, calc(100vh - 5.5rem));
+	padding-block: clamp(5rem, 12vw, 11rem) clamp(4rem, 8vw, 7rem);
+	position: relative;
+}
+
+.hero-copy {
+	grid-column: 1 / -1;
+}
+
+.kicker,
+.index-mark {
+	color: var(--red);
+	display: block;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.kicker span {
+	color: var(--ink);
+	padding-inline: 0.4rem;
+}
+
+.hero h1 {
+	color: var(--ink);
+	font-size: clamp(4rem, 11vw, 10.5rem);
+	font-weight: 700;
+	letter-spacing: -0.09em;
+	line-height: 0.84;
+	margin: 2.5rem 0 0;
+	max-inline-size: 10ch;
+	text-transform: none;
+}
+
+em {
+	font-weight: 400;
+}
+
+.tagline {
+	font-size: clamp(1.1rem, 2vw, 1.5rem);
+	line-height: 1.25;
+	margin: 2.5rem 0 0;
+	max-inline-size: 28rem;
+}
+
+.hero-note {
+	align-self: end;
+	border-block-start: 1px solid var(--ink);
+	padding-block-start: 1rem;
+}
+
+.hero-note p {
+	font-size: 0.9rem;
+	line-height: 1.4;
+	margin: 1.5rem 0 0;
+	max-inline-size: 20rem;
+}
+
+.hero-actions {
+	align-self: end;
+	justify-self: end;
+}
+
+.poster-btn {
+	background: var(--red);
+	border: 1px solid var(--red);
+	color: var(--ink);
+	display: inline-flex;
+	font-size: 0.7rem;
+	font-weight: 700;
+	gap: 2rem;
+	justify-content: space-between;
+	letter-spacing: 0.08em;
+	padding: 1rem 1.2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background 0.15s ease, color 0.15s ease;
+	min-inline-size: 12rem;
+}
+
+.poster-btn:hover {
+	background: var(--ink);
+	border-color: var(--ink);
+	color: var(--paper);
+}
+
+.content-section {
+	border-block-end: 1px solid var(--ink);
+	padding-block: clamp(5rem, 10vw, 9rem);
+}
+
+.section-heading {
+	display: grid;
+	grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr) minmax(12rem, 0.45fr);
+	gap: 2rem;
+	margin-block-end: 4rem;
+}
+
+.section-heading h2,
+.contact-section h2 {
+	color: var(--ink);
+	font-size: clamp(2.8rem, 6vw, 6.5rem);
+	font-weight: 700;
+	letter-spacing: -0.08em;
+	line-height: 0.88;
+	margin: 0;
+	text-transform: none;
+}
+
+.section-intro {
+	align-self: end;
+	color: var(--muted) !important;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	margin: 0;
+	max-inline-size: 17rem;
+}
+
+.tickets {
+	display: grid;
+	gap: 0;
+	grid-template-columns: repeat(2, 1fr);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ticket {
+	border-block-start: 1px solid var(--line);
+	display: flex;
+	flex-direction: column;
+	min-block-size: 16rem;
+	padding: 1.25rem 1.5rem 2rem 0;
+}
+
+.ticket:nth-child(even) {
+	border-inline-start: 1px solid var(--line);
+	padding-inline: 1.5rem 0;
+}
+
+.ticket .admit {
+	color: var(--red);
+	display: flex;
+	font-size: 0.65rem;
+	font-weight: 700;
+	justify-content: space-between;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.ticket h3 {
+	font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	line-height: 0.95;
+	margin: 3rem 0 0.75rem;
+	max-inline-size: 14ch;
+	text-transform: none;
+}
+
+.ticket p,
+.ticket div:not(.admit) {
+	color: var(--muted);
+	font-size: 0.9rem;
+	line-height: 1.45;
+	max-inline-size: 34ch;
+}
+
+.ticket .text-link {
+	margin-block-start: auto;
+	padding-block-start: 2rem;
+}
+
+.text-link {
+	color: var(--ink);
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.text-link span {
+	color: var(--red);
+	font-size: 1rem;
+	margin-inline-start: 0.5rem;
+}
+
+.portrait {
+	border: 0;
+	border-radius: 0;
+	filter: grayscale(1);
+	inline-size: 5rem;
+	margin-block-start: 2rem;
+	object-fit: cover;
+}
+
+.person h3 {
+	margin-block-start: 1rem;
+}
+
+.work-section {
+	background: var(--ink);
+	color: var(--paper);
+	margin-inline: calc((100vw - min(90rem, 100% - 3rem)) / -2);
+	padding-inline: max(1.5rem, calc((100vw - min(90rem, 100% - 3rem)) / 2));
+}
+
+.work-section :where(h2, p, .ticket h3, .ticket p, .text-link) {
+	color: var(--paper);
+}
+
+.work-section .ticket {
+	border-color: #4a4a47;
+}
+
+.work-section .ticket .admit,
+.work-section .index-mark,
+.work-section .text-link span {
+	color: var(--red);
+}
+
+.papers-section .ticket h3 {
+	max-inline-size: 24ch;
+}
+
+.news-section {
+	padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.compact-heading {
+	grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr);
+	margin-block-end: 3rem;
+}
+
+.news-section .tickets {
+	grid-template-columns: 1fr;
+}
+
+.news-section .ticket {
+	min-block-size: auto;
+	padding-block: 1.5rem;
+}
+
+.news-section .ticket:nth-child(even) {
+	border-inline-start: 0;
+	padding-inline: 0;
+}
+
+.news-section .ticket h3 {
+	margin-block-start: 1.5rem;
+	max-inline-size: 30ch;
+}
+
+.contact-section {
+	background: var(--red);
+	margin-inline: calc((100vw - min(90rem, 100% - 3rem)) / -2);
+	padding: clamp(4rem, 10vw, 9rem) max(1.5rem, calc((100vw - min(90rem, 100% - 3rem)) / 2));
+}
+
+.contact-section h2 {
+	margin-block: 2.5rem;
+	max-inline-size: 10ch;
+}
+
+.contact-section p {
+	font-size: 1rem;
+	margin-block-end: 2rem;
+}
+
+.contact-link {
+	border-block-end: 1px solid var(--ink);
+	color: var(--ink);
+	display: inline-flex;
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	gap: 2rem;
+	padding-block-end: 0.5rem;
+	text-decoration: none;
+}
+
+.poster-footer {
+	background: var(--ink);
+	color: var(--paper);
+	padding-block: 2rem;
+	text-align: left;
+}
+
+.poster-footer p {
+	color: var(--paper);
+	font-size: 0.7rem;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.poster-footer .credits {
+	color: var(--red);
+	margin-block-end: 0.5rem;
+}
+
+@media (max-width: 700px) {
+	.poster-wrap {
+		inline-size: min(100% - 2rem, 90rem);
+	}
+
+	.poster-nav .poster-wrap {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 1rem;
+		padding-block: 1.2rem;
+	}
+
+	.poster-nav ul {
+		gap: 0.8rem 1.2rem;
+	}
+
+	.hero {
+		display: block;
+		min-block-size: auto;
+		padding-block: 5rem;
+	}
+
+	.hero h1 {
+		font-size: clamp(3.8rem, 18vw, 7rem);
+	}
+
+	.hero-note {
+		margin-block-start: 5rem;
+	}
+
+	.hero-actions {
+		margin-block-start: 2rem;
+	}
+
+	.section-heading,
+	.compact-heading {
+		display: block;
+	}
+
+	.section-heading h2 {
+		margin-block: 2rem;
+	}
+
+	.section-intro {
+		margin-block-start: 2rem;
+	}
+
+	.tickets {
+		grid-template-columns: 1fr;
+	}
+
+	.ticket,
+	.ticket:nth-child(even) {
+		border-inline-start: 0;
+		padding-inline: 0;
+	}
+
+	.work-section,
+	.contact-section {
+		margin-inline: -1rem;
+		padding-inline: 1rem;
+	}
+}
