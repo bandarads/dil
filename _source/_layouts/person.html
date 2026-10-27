@@ -1,0 +1,93 @@
+---
+layout: base.html
+---
+
+<header class="poster-nav">
+  <div class="poster-wrap">
+    <a class="brand" href="{{ '/' | url }}"><span>DIL</span> {{ site.title }}</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="{{ '/' | url }}#cast">People</a></li>
+        <li><a href="{{ '/' | url }}#research">Research</a></li>
+        <li><a href="{{ '/' | url }}#papers">Writing</a></li>
+        <li><a href="{{ '/' | url }}#contact">Contact <span class="arrow">↗</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="poster-main profile-page">
+  <div class="poster-wrap">
+    <a class="text-link profile-back" href="{{ '/' | url }}#cast">← All people</a>
+    <section class="profile-intro">
+      <div>
+        <span class="index-mark">{{ role }}</span>
+        <h1>{{ title }}</h1>
+        <div class="profile-bio">{{ content }}</div>
+      </div>
+      {%- if photo %}
+      <img class="profile-portrait" src="{{ photo }}" alt="{{ title }}" fetchpriority="high">
+      {%- else %}
+      <img class="profile-portrait" src="{{ '/assets/images/portrait-placeholder.svg' | url }}" alt="Placeholder portrait" fetchpriority="high">
+      {%- endif %}
+    </section>
+
+    {% if research_interests %}
+    <section class="profile-block">
+      <span class="profile-label">Research interests</span>
+      <p>{{ research_interests | join: " · " }}</p>
+    </section>
+    {% endif %}
+
+    {% if dil_projects %}
+    <section class="profile-block">
+      <span class="profile-label">DIL projects</span>
+      {% for project in dil_projects %}
+      <div class="profile-item">
+        <strong>{{ project.title }}</strong>
+        <p>{{ project.description }}</p>
+        <small>{{ project.status }}{% if project.students %} · Students: {{ project.students }}{% endif %}{% if project.partners %} · Partners: {{ project.partners }}{% endif %}</small>
+        {% if project.link %}<a class="text-link" href="{{ project.link }}">Project link <span>↗</span></a>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if selected_publications %}
+    <section class="profile-block">
+      <span class="profile-label">Selected publications</span>
+      {% for publication in selected_publications %}
+      <div class="profile-item"><strong>{{ publication.title }}</strong>{% if publication.link %}<a class="text-link" href="{{ publication.link }}">DOI / webpage <span>↗</span></a>{% endif %}</div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if student_involvement %}
+    <section class="profile-block">
+      <span class="profile-label">Student involvement</span>
+      {% for student in student_involvement %}
+      <div class="profile-item">
+        {% if student.photo %}<img class="student-photo" src="{{ student.photo }}" alt="{{ student.name }}" loading="lazy">{% endif %}
+        <strong>{{ student.name }}</strong>
+        <p>{{ student.description }}</p>
+        {% if student.link %}<a class="text-link" href="{{ student.link }}">Student project <span>↗</span></a>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if links %}
+    <div class="profile-links">
+      {% if links.faculty %}<a class="text-link" href="{{ links.faculty }}">Faculty webpage <span>↗</span></a>{% endif %}
+      {% if links.scholar %}<a class="text-link" href="{{ links.scholar }}">Scholar / ORCID <span>↗</span></a>{% endif %}
+      {% if links.other %}<a class="text-link" href="{{ links.other }}">Other link <span>↗</span></a>{% endif %}
+    </div>
+    {% endif %}
+    {% if link %}<a class="text-link profile-external-link" href="{{ link }}">View external profile <span>↗</span></a>{% endif %}
+  </div>
+</main>
+
+<footer class="poster-footer">
+  <p class="credits">Digital Immigration Lab <span>—</span> Studying technology, migration, and belonging.</p>
+  <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+</footer>

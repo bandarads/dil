@@ -21,6 +21,29 @@ content:
         label: Contact email
         type: string
 
+  - name: display-order
+    label: Display order
+    type: file
+    path: _source/_data/order.json
+    format: json
+    fields:
+      - name: people
+        label: People
+        type: string
+        list: true
+      - name: projects
+        label: Projects
+        type: string
+        list: true
+      - name: publications
+        label: Publications
+        type: string
+        list: true
+      - name: news
+        label: News
+        type: string
+        list: true
+
   - name: people
     label: People
     type: collection

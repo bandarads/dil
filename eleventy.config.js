@@ -18,6 +18,24 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addShortcode('image', image);
 	eleventyConfig.addPairedShortcode('setVar', setVar);
 	eleventyConfig.addFilter('markdownify', markdownify);
+	eleventyConfig.addFilter('orderedBy', (items, slugs) => {
+		const positions = new Map();
+		if (Array.isArray(slugs)) {
+			slugs.forEach((slug, index) => {
+				if (!positions.has(slug)) positions.set(slug, index);
+			});
+		}
+
+		const orderedItems = Array.isArray(items) ? items : [];
+		return [...orderedItems].sort((a, b) => {
+			const aPosition = positions.get(a.fileSlug);
+			const bPosition = positions.get(b.fileSlug);
+			if (aPosition === undefined && bPosition === undefined) return 0;
+			if (aPosition === undefined) return 1;
+			if (bPosition === undefined) return -1;
+			return aPosition - bPosition;
+		});
+	});
 
 	/* --------------------------------------------------------------------------
   MarkdownIt settings
