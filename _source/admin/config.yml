@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: bandarads/dil
+  name: turbo-github
+  turbo_site_id: ecef7aa3-b30d-45b0-b015-f9941e227a87
   branch: main
 
 local_backend: true
