@@ -1,17 +1,18 @@
 :root {
-	color-scheme: light;
-	--paper: #f4f1eb;
-	--ink: #171717;
-	--muted: #716f6a;
-	--line: #c9c5bd;
-	--red: #f04e3e;
+	color-scheme: dark;
+	--paper: #080808;
+	--ink: #fff;
+	--muted: #aaa;
+	--line: #3a3a3a;
+	--red: #e23636;
+	--yellow: #edff00;
 	--font-display: "Helvetica Neue", "Arial", sans-serif;
 	--font-body: "Helvetica Neue", "Arial", sans-serif;
 	--color-text: var(--ink);
 	--color-bg: var(--paper);
-	--color-bg-dark: #e6e2da;
-	--color-accent: var(--red);
-	--color-link: var(--ink);
+	--color-bg-dark: #171717;
+	--color-accent: var(--yellow);
+	--color-link: var(--yellow);
 	--color-border: var(--line);
 }
 
@@ -58,7 +59,7 @@ body :where(p, ul, ol, dl, blockquote, li) {
 }
 
 .brand span {
-	color: var(--red);
+	color: var(--yellow);
 	margin-inline-end: 0.5rem;
 }
 
@@ -82,11 +83,11 @@ body :where(p, ul, ol, dl, blockquote, li) {
 .poster-nav li a:hover,
 .text-link:hover,
 .contact-link:hover {
-	color: var(--red);
+	color: var(--yellow);
 }
 
 .arrow {
-	color: var(--red);
+	color: var(--yellow);
 	font-size: 1rem;
 }
 
@@ -106,7 +107,7 @@ body :where(p, ul, ol, dl, blockquote, li) {
 
 .kicker,
 .index-mark {
-	color: var(--red);
+	color: var(--yellow);
 	display: block;
 	font-size: 0.68rem;
 	font-weight: 700;
@@ -115,7 +116,7 @@ body :where(p, ul, ol, dl, blockquote, li) {
 }
 
 .kicker span {
-	color: var(--ink);
+	color: var(--muted);
 	padding-inline: 0.4rem;
 }
 
@@ -160,9 +161,9 @@ em {
 }
 
 .poster-btn {
-	background: var(--red);
-	border: 1px solid var(--red);
-	color: var(--ink);
+	background: var(--yellow);
+	border: 1px solid var(--yellow);
+	color: #000;
 	display: inline-flex;
 	font-size: 0.7rem;
 	font-weight: 700;
@@ -177,9 +178,9 @@ em {
 }
 
 .poster-btn:hover {
-	background: var(--ink);
-	border-color: var(--ink);
-	color: var(--paper);
+	background: var(--red);
+	border-color: var(--red);
+	color: #fff;
 }
 
 .content-section {
@@ -237,7 +238,7 @@ em {
 }
 
 .ticket .admit {
-	color: var(--red);
+	color: var(--yellow);
 	display: flex;
 	font-size: 0.65rem;
 	font-weight: 700;
@@ -279,7 +280,7 @@ em {
 }
 
 .text-link span {
-	color: var(--red);
+	color: var(--yellow);
 	font-size: 1rem;
 	margin-inline-start: 0.5rem;
 }
@@ -298,18 +299,18 @@ em {
 }
 
 .work-section {
-	background: var(--ink);
-	color: var(--paper);
+	background: var(--yellow);
+	color: #000;
 	margin-inline: calc((100vw - min(90rem, 100% - 3rem)) / -2);
 	padding-inline: max(1.5rem, calc((100vw - min(90rem, 100% - 3rem)) / 2));
 }
 
 .work-section :where(h2, p, .ticket h3, .ticket p, .text-link) {
-	color: var(--paper);
+	color: #000;
 }
 
 .work-section .ticket {
-	border-color: #4a4a47;
+	border-color: rgb(0 0 0 / 35%);
 }
 
 .work-section .ticket .admit,
@@ -377,14 +378,14 @@ em {
 }
 
 .poster-footer {
-	background: var(--ink);
-	color: var(--paper);
+	background: #000;
+	color: #fff;
 	padding-block: 2rem;
 	text-align: left;
 }
 
 .poster-footer p {
-	color: var(--paper);
+	color: #fff;
 	font-size: 0.7rem;
 	margin: 0;
 	text-transform: uppercase;
