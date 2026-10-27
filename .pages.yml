@@ -41,8 +41,87 @@ content:
         type: string
         required: false
       - name: body
-        label: Bio
+        label: Short bio
         type: rich-text
+      - name: research_interests
+        label: Research interests
+        type: string
+        list:
+          max: 5
+      - name: dil_projects
+        label: DIL projects
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Project title
+            type: string
+          - name: description
+            type: rich-text
+          - name: status
+            type: string
+          - name: students
+            label: Students involved
+            type: string
+          - name: partners
+            label: Community or organizational partners
+            type: string
+          - name: link
+            label: Project or demo link
+            type: string
+            required: false
+      - name: selected_publications
+        label: Selected publications
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            type: string
+          - name: link
+            label: DOI or webpage link
+            type: string
+      - name: student_involvement
+        label: Student involvement
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            type: string
+          - name: photo
+            type: image
+            required: false
+          - name: description
+            label: Project or collaboration
+            type: text
+          - name: link
+            label: Project link
+            type: string
+            required: false
+      - name: links
+        label: Links
+        type: object
+        fields:
+          - name: faculty
+            label: Faculty webpage
+            type: string
+            required: false
+          - name: scholar
+            label: Google Scholar or ORCID
+            type: string
+            required: false
+          - name: other
+            label: Other relevant links
+            type: string
+            required: false
 
   - name: projects
     label: Projects
