@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: adamstddrd/grease
+  repo: bandarads/dil
   branch: main
 
 local_backend: true

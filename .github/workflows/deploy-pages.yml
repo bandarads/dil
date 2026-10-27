@@ -33,7 +33,8 @@ jobs:
       - name: Build site
         run: npm run publish:prod
         env:
-          URL: https://adamstddrd.github.io/grease
+          URL: https://bandarads.github.io/dil
+          SITE_PATH_PREFIX: /dil/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
