@@ -37,6 +37,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('_source/assets/images');
         eleventyConfig.addPassthroughCopy('_source/admin/config.yml');
 	return {
+		pathPrefix: process.env.GITHUB_ACTIONS ? '/grease/' : '/',
 		dir: {
 			input: '_source',
 			output: '_public',

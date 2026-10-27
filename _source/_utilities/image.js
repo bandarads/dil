@@ -11,10 +11,11 @@ export default async function image(
 	loadingAttr = 'lazy',
 ) {
 	const filePath = `_source/assets/images/${src}`;
+	const pathPrefix = process.env.GITHUB_ACTIONS ? '/grease' : '';
 	const metadata = await eleventyImage(filePath, {
 		widths: [500, 1000, 1500, 2000, 2500, 3000],
 		formats: ['webp'],
-		urlPath: '/assets/images/',
+		urlPath: `${pathPrefix}/assets/images/`,
 		outputDir: './_public/assets/images/',
 		sharpWebpOptions: { quality: 40 },
 	});

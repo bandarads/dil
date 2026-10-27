@@ -36,10 +36,10 @@
     <link rel="canonical" href="{{ env.baseUrl }}{{ page.url }}">
     {%- endif -%}
 
-    <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
-    <link rel="mask-icon" href="/assets/images/icons/favicon.svg" color="#000000">
-    <link rel="apple-touch-icon" href="/assets/images/icons/favicon-196x196.png">
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon-32x32.png' | url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/icons/favicon.svg' | url }}">
+    <link rel="mask-icon" href="{{ '/assets/images/icons/favicon.svg' | url }}" color="#000000">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/icons/favicon-196x196.png' | url }}">
     <link rel="expect" href="#header" blocking="render" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,14 +50,14 @@
       {% getBundle "css" %}
     </style>
 
-    <link rel="stylesheet" href="/assets/css/main.css" media="all">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" media="all">
     {%- if stylesheet -%}
     {%- for sheet in stylesheet -%}
     <link rel="stylesheet" href="{{ sheet }}" media="all">
     {%- endfor -%}
     {%- endif -%}
 
-    <script src="/assets/js/app.js" type="module"></script>
+    <script src="{{ '/assets/js/app.js' | url }}" type="module"></script>
     {%- if javascript -%}
     {%- for script in javascript -%}
     <script src="{{ script }}" type="module"></script>

@@ -1,11 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: adamstddrd/grease
   branch: main
 
 local_backend: true
 publish_mode: editorial_workflow
 media_folder: _source/assets/images/uploads
-public_folder: /assets/images/uploads
+public_folder: /grease/assets/images/uploads
 
 collections:
   - name: site
