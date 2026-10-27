@@ -31,6 +31,10 @@ content:
         label: People
         type: string
         list: true
+      - name: alumni
+        label: DIL alumni
+        type: string
+        list: true
       - name: projects
         label: Projects
         type: string
@@ -145,6 +149,36 @@ content:
             label: Other relevant links
             type: string
             required: false
+
+  - name: alumni
+    label: DIL alumni
+    type: collection
+    path: _source/alumni
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Name
+        type: string
+      - name: role
+        label: Role or program
+        type: string
+        required: false
+      - name: graduation_year
+        label: Graduation year
+        type: string
+        required: false
+      - name: photo
+        type: image
+        required: false
+      - name: link
+        label: Profile link
+        type: string
+        required: false
+      - name: body
+        label: Bio
+        type: rich-text
+        required: false
 
   - name: projects
     label: Projects

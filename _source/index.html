@@ -44,7 +44,7 @@ layout: base.html
         <h2>Many voices.<br><em>Shared questions.</em></h2>
         <p class="section-intro">Researchers bringing different perspectives to migration and technology.</p>
       </div>
-    <ul class="tickets">
+    <ul class="tickets people-list">
       {%- assign people = collections.people | orderedBy: order.people %}
       {%- for person in people %}
       <li class="ticket person">
@@ -63,6 +63,28 @@ layout: base.html
       </li>
       {%- endfor %}
     </ul>
+    <details class="alumni">
+      <summary>
+        <span class="alumni-title">DIL Alumni</span>
+        <span class="alumni-icon" aria-hidden="true">+</span>
+      </summary>
+      <ul class="tickets alumni-list">
+        {%- assign alumni = collections.alumni | orderedBy: order.alumni %}
+        {%- for alumnus in alumni %}
+        <li class="ticket alumni-card">
+          {% if alumnus.data.role or alumnus.data.graduation_year %}
+          <div class="admit"><span>{{ alumnus.data.role }}</span><span>{{ alumnus.data.graduation_year }}</span></div>
+          {% endif %}
+          {% if alumnus.data.photo %}<img class="portrait" src="{{ alumnus.data.photo }}" alt="{{ alumnus.data.title }}" loading="lazy">{% endif %}
+          <h3>{{ alumnus.data.title }}</h3>
+          {% if alumnus.content %}<div class="person-summary">{{ alumnus.content }}</div>{% endif %}
+          {% if alumnus.data.link %}<a class="text-link" href="{{ alumnus.data.link }}">View profile <span>↗</span></a>{% endif %}
+        </li>
+        {%- else %}
+        <li class="alumni-empty">Alumni profiles will appear here.</li>
+        {%- endfor %}
+      </ul>
+    </details>
     </section>
 
     <section class="content-section work-section" id="research">
