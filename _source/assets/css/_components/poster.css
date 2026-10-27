@@ -102,7 +102,26 @@ body :where(p, ul, ol, dl, blockquote, li) {
 }
 
 .hero-copy {
-	grid-column: 1 / -1;
+	grid-column: 1;
+}
+
+.hero-visual {
+	align-self: center;
+	grid-column: 2;
+	grid-row: 1 / 4;
+}
+
+.hero-visual img {
+	display: block;
+	inline-size: 100%;
+}
+
+.project-image {
+	aspect-ratio: 16 / 9;
+	display: block;
+	inline-size: 100%;
+	margin-block-start: 1.5rem;
+	object-fit: cover;
 }
 
 .kicker,
@@ -218,7 +237,7 @@ em {
 .tickets {
 	display: grid;
 	gap: 0;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -228,6 +247,7 @@ em {
 	border-block-start: 1px solid var(--line);
 	display: flex;
 	flex-direction: column;
+	min-inline-size: 0;
 	min-block-size: 16rem;
 	padding: 1.25rem 1.5rem 2rem 0;
 }
@@ -286,8 +306,10 @@ em {
 }
 
 .portrait {
+	aspect-ratio: 1;
 	border: 0;
 	border-radius: 0;
+	display: block;
 	filter: grayscale(1);
 	inline-size: 5rem;
 	margin-block-start: 2rem;
@@ -417,6 +439,10 @@ em {
 		display: block;
 		min-block-size: auto;
 		padding-block: 5rem;
+	}
+
+	.hero-visual {
+		margin-block-start: 3rem;
 	}
 
 	.hero h1 {

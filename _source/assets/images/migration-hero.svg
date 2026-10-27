@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" fill="none">
+  <rect width="640" height="720" fill="#EDFF00"/>
+  <circle cx="340" cy="356" r="220" stroke="#080808" stroke-width="2"/>
+  <ellipse cx="340" cy="356" rx="104" ry="220" stroke="#080808" stroke-width="2"/>
+  <path d="M120 356h440M151 246h378M151 466h378M340 136v440" stroke="#080808" stroke-width="2"/>
+  <path d="M134 482c67-91 132-149 197-164 58-14 102 38 171 10 39-16 67-56 101-96" stroke="#E23636" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="134" cy="482" r="15" fill="#E23636"/>
+  <circle cx="603" cy="232" r="15" fill="#E23636"/>
+  <circle cx="331" cy="318" r="11" fill="#080808"/>
+  <path d="m576 226 27 6-7 27" stroke="#E23636" stroke-width="8" stroke-linecap="square"/>
+  <path d="M48 626h180" stroke="#080808" stroke-width="2"/>
+  <text x="48" y="672" fill="#080808" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">BORDERS / NETWORKS</text>
+</svg>

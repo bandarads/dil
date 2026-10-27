@@ -1,5 +1,5 @@
 ---
-title: Project Blockbuster
-status: In production
+title: Digital borders and everyday life
+status: Research theme
 ---
-A short description of what this project investigates and why it matters.
+We explore how digital tools and systems shape migration journeys, access to essential services, and people's experiences of belonging.
