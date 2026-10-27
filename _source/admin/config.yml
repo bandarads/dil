@@ -1,13 +1,25 @@
 backend:
-  name: github
-  repo: OWNER/REPO # TODO: set to your GitHub repo
+  name: git-gateway
   branch: main
 
 local_backend: true
+publish_mode: editorial_workflow
 media_folder: _source/assets/images/uploads
 public_folder: /assets/images/uploads
 
 collections:
+  - name: site
+    label: Site settings
+    files:
+      - label: Site settings
+        name: site
+        file: _source/_data/site.json
+        fields:
+          - { label: Lab name, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Tagline, name: tagline, widget: text }
+          - { label: Contact email, name: email, widget: string }
+
   - name: people
     label: People
     folder: _source/people
