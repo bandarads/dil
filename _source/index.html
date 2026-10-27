@@ -59,7 +59,7 @@ layout: base.html
         {% if person.data.research_interests %}
         <p class="person-interests">{{ person.data.research_interests | join: " · " }}</p>
         {% endif %}
-        <a class="text-link" href="{{ person.url }}">Open full profile <span>↗</span></a>
+        <a class="text-link" href="{{ person.url | url }}">Open full profile <span>↗</span></a>
       </li>
       {%- endfor %}
     </ul>
