@@ -100,7 +100,7 @@ layout: base.html
         <div class="admit"><span>{{ forloop.index }}</span><span>{{ project.data.status }}</span></div>
         <img class="project-image" src="{{ '/assets/images/research-placeholder.svg' | url }}" alt="Abstract placeholder artwork for migration and technology research" loading="lazy">
         <h3>{{ project.data.title }}</h3>
-        <div>{{ project.content }}</div>
+        <div class="project-description">{{ project.content }}</div>
         <a class="text-link" href="#contact">Get in touch <span>↗</span></a>
       </li>
       {%- endfor %}

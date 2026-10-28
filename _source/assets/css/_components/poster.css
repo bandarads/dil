@@ -557,6 +557,11 @@ em {
 	color: var(--red);
 }
 
+.work-section .ticket .project-description,
+.work-section .ticket .project-description p {
+	color: var(--red);
+}
+
 .work-section .ticket {
 	border-color: rgb(0 0 0 / 35%);
 }
