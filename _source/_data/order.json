@@ -1,15 +1,13 @@
 {
   "people": [
-    "principal-investigator",
     "dr-julie-mughal",
+    "principal-investigator",
     "dr-sabnam-ghosh",
     "sam-student"
   ],
-  "alumni": [],
   "projects": [
     "project-blockbuster"
   ],
-  "publications": [],
   "news": [
     "new-website"
   ]
