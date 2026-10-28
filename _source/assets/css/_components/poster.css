@@ -227,7 +227,7 @@ em {
 
 .section-intro {
 	align-self: end;
-	color: var(--muted) !important;
+	color: var(--muted);
 	font-size: 0.9rem;
 	line-height: 1.4;
 	margin: 0;
@@ -547,6 +547,14 @@ em {
 
 .work-section :where(h2, p, .ticket h3, .ticket p, .text-link) {
 	color: #000;
+}
+
+.work-section .section-heading h2 {
+	color: #000;
+}
+
+.work-section .section-intro {
+	color: var(--red);
 }
 
 .work-section .ticket {
