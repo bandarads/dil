@@ -1,6 +1,7 @@
 ---
 title: Dr. Julie Mughal
 role: Principal Investigator
+photo: /dil/assets/images/uploads/Gemini_Generated_Image_7pg2mn7pg2mn7pg2.jpg
 research_interests:
   - Humanitarian Pedagogy
   - Refugees
