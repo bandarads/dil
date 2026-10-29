@@ -109,7 +109,7 @@ body :where(p, ul, ol, dl, blockquote, li) {
 .hero-visual {
 	align-self: center;
 	grid-column: 2;
-	grid-row: 1 / 4;
+	grid-row: 1;
 }
 
 .hero-visual img {
@@ -167,6 +167,7 @@ em {
 
 .hero-note {
 	align-self: end;
+	grid-column: 1 / -1;
 	border-block-start: 1px solid var(--ink);
 	padding-block-start: 1rem;
 }
@@ -180,6 +181,7 @@ em {
 
 .hero-actions {
 	align-self: end;
+	grid-column: 1 / -1;
 	justify-self: end;
 }
 
