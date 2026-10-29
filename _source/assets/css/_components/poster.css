@@ -545,8 +545,8 @@ em {
 .work-section {
 	background: var(--yellow);
 	color: #000;
-	margin-inline: calc((100vw - min(90rem, 100% - 3rem)) / -2);
-	padding-inline: max(1.5rem, calc((100vw - min(90rem, 100% - 3rem)) / 2));
+	box-shadow: 0 0 0 100vmax var(--yellow);
+	clip-path: inset(0 -100vmax);
 }
 
 .work-section :where(h2, p, .ticket h3, .ticket p, .text-link) {
@@ -610,8 +610,9 @@ em {
 
 .contact-section {
 	background: var(--red);
-	margin-inline: calc((100vw - min(90rem, 100% - 3rem)) / -2);
-	padding: clamp(4rem, 10vw, 9rem) max(1.5rem, calc((100vw - min(90rem, 100% - 3rem)) / 2));
+	box-shadow: 0 0 0 100vmax var(--red);
+	clip-path: inset(0 -100vmax);
+	padding-block: clamp(4rem, 10vw, 9rem);
 }
 
 .contact-section h2 {
@@ -764,12 +765,6 @@ em {
 	.alumni-list .ticket:nth-child(3n) {
 		border-inline-start: 0;
 		padding-inline: 0;
-	}
-
-	.work-section,
-	.contact-section {
-		margin-inline: -1rem;
-		padding-inline: 1rem;
 	}
 }
 
