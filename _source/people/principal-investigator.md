@@ -1,6 +1,7 @@
 ---
 title: Dr. Danushka Bandara
 role: Principal Investigator
+photo: /dil/assets/images/uploads/Gemini_Generated_Image_jyrvu2jyrvu2jyrv.jpg
 link: https://www.linkedin.com/in/danushkabandara/
 research_interests:
   - Human centered design
