@@ -1,6 +1,7 @@
 ---
 title: Dr. Sabnam Ghosh
 role: Principal Investigator
+photo: /dil/assets/images/uploads/Gemini_Generated_Image_mh19hxmh19hxmh19.jpg
 research_interests:
   - Literature
   - Immigrant Narratives
