@@ -1,6 +1,7 @@
 ---
 title: Josephine Reed
 role: Research Fellow
+photo: /dil/assets/images/uploads/Gemini_Generated_Image_88as6j88as6j88as.jpg
 research_interests:
   - Immigration
   - Women's health care
