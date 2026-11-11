@@ -1,6 +1,6 @@
 ---
 title: Catherine Steele
-role: Student Researcher
+role: Student Research Fellow
 graduation_year: "2027"
 photo: /dil/assets/images/uploads/EtDciQL4.png
 link: "www.linkedin.com/in/catherine-steele-a65554301 "
