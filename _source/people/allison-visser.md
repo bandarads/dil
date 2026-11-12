@@ -1,6 +1,7 @@
 ---
 title: Allison Visser
 role: Research Fellow
+link: https://www.linkedin.com/in/allisonvisser/
 research_interests:
   - Humanitarian Action
   - Internal Displacement
