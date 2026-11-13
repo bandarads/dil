@@ -1,7 +1,7 @@
 ---
 title: Allison Visser
 role: Research Fellow
-photo: /dil/assets/images/uploads/Gemini_Generated_Image_eh8w5eh8w5eh8w5e.jpg
+photo: /dil/assets/images/uploads/Gemini_Generated_Image_eh8w5eh8w5eh8w5e-1.jpg
 link: https://www.linkedin.com/in/allisonvisser/
 research_interests:
   - Humanitarian Action
