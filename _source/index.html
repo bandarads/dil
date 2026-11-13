@@ -79,7 +79,7 @@ layout: base.html
           {% if alumnus.data.photo %}<img class="portrait" src="{{ alumnus.data.photo }}" alt="{{ alumnus.data.title }}" loading="lazy">{% endif %}
           <h3>{{ alumnus.data.title }}</h3>
           {% if alumnus.content %}<div class="person-summary">{{ alumnus.content }}</div>{% endif %}
-          {% if alumnus.data.link %}<a class="text-link" href="{{ alumnus.data.link }}">View profile <span>↗</span></a>{% else %}<a class="text-link" href="{{ alumnus.url | url }}">View profile <span>↗</span></a>{% endif %}
+          <a class="text-link" href="{{ alumnus.url | url }}">View profile <span>↗</span></a>
         </li>
         {%- else %}
         <li class="alumni-empty">Alumni profiles will appear here.</li>
